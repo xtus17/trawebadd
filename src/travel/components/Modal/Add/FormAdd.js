@@ -258,20 +258,15 @@ export function FormAdd() {
                 className="mb-3"
               >
                 <option value="">Selecciona la categoría</option>
-                <option value="Sitios Naturales">Sitios Naturales</option>{" "}
-                {/*montañas, valles, lagos, rios, pantanos, grutas, areas protegidas */}
+                <option value="Sitios Naturales">Sitios Naturales</option>
                 <option value="Manifestaciones Culturales">
                   Manifestaciones Culturales
-                </option>{" "}
-                {/* museos, lugares historicos, lugares arqueologicos */}
-                <option value="Folklore">Folklore</option>{" "}
-                {/* manifestaciones religiosas, ferias, mercados, musica, danza, artes, gastronomia*/}
-                <option value="Servicios">Servicios</option>{" "}
-                {/*  alojamiento, restaurant, hoteles, bares, comida rapida*/}
+                </option>
+                <option value="Folklore">Folklore</option>
+                <option value="Servicios">Servicios</option>
                 <option value="Medio de Transporte">
                   Medio de Transporte
-                </option>{" "}
-                {/*  terrestre, pie, bus publico, */}
+                </option>
               </Form.Select>
             </Form.Group>
 

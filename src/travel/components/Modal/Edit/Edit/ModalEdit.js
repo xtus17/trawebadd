@@ -103,15 +103,15 @@ export const ModalEdit = ({ isModalEditar, setIsModalEditar, editar }) => {
                   }
                 >
                   <option value="">Selecciona una opción</option>
-                  <option value="Vandalismo">Vandalismo</option>
-                  <option value="Violencia Familiar">Violencia Familiar</option>
-                  <option value="Asesinato">Asesinato</option>
-                  <option value="Robo">Robo</option>
-                  <option value="Agresión Sexual">Agresión Sexual</option>
-                  <option value="Persona Desaparecida">
-                    Persona Desaparecida
+                  <option value="Sitios Naturales">Sitios Naturales</option>
+                  <option value="Manifestaciones Culturales">
+                    Manifestaciones Culturales
                   </option>
-                  <option value="Otro">Otro</option>
+                  <option value="Folklore">Folklore</option>
+                  <option value="Servicios">Servicios</option>
+                  <option value="Medio de Transporte">
+                    Medio de Transporte
+                  </option>
                 </Form.Select>
               </Form.Group>
 
