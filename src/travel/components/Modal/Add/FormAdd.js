@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Form, Button, Dropdown } from "react-bootstrap";
 import "./Styles.css";
-import { Stack, Center, Box, chakra, Image } from "@chakra-ui/react";
+import { Stack, Center, Box, chakra, Image, Flex } from "@chakra-ui/react";
 import PlacesAutocomplete, {
   geocodeByAddress,
   getLatLng,
@@ -29,6 +29,27 @@ export function FormAdd() {
   const [arrayImage, setArrayImage] = useState([]);
   const [arrayVideo, setArrayVideo] = useState([]);
   const [loader, setLoader] = useState(false);
+
+  const [texts, setTexts] = useState([""]);
+  const [videoLink, setvideoLink] = useState([]);
+
+  const handleAddText = () => {
+    const newTexts = [...videoLink, ""];
+    setvideoLink(newTexts);
+  };
+
+  const handleVideoLinkChange = (index, newText) => {
+    const newTexts = [...videoLink];
+    newTexts[index] = newText;
+    setvideoLink(newTexts);
+  };
+
+  const handleRemoveVideoLink = (index) => {
+    const newTexts = videoLink.filter((_, i) => i !== index);
+    setvideoLink(newTexts);
+  };
+
+  console.log(videoLink);
 
   const center = { lat: -11.1043861, lng: -77.6069797 };
   const defaultBounds = {
@@ -158,6 +179,7 @@ export function FormAdd() {
       const category = document.getElementById("categoria").value;
       const descripcion = document.getElementById("descripcionPlace").value;
       const place = document.getElementById("placeName").value;
+      const idVideo = videoLink;
       const image = responseImage;
       const video = responseVideo;
       const direccion = address;
@@ -178,6 +200,7 @@ export function FormAdd() {
         province,
         state,
         location,
+        idVideo,
       };
 
       setAddress("");
@@ -216,11 +239,13 @@ export function FormAdd() {
     setArrayVideo(updatedList);
   };
 
+  console.log(arrayImage);
+
   return (
     <>
       <Header />
       <Center>
-        <Stack pt={20}>
+        <Stack w="550px" pt={20}>
           <Center pb={5} fontSize={20} fontWeight={"bold"}>
             <MdPlace /> Agregar Nuevo Lugar Turístico
           </Center>
@@ -272,6 +297,41 @@ export function FormAdd() {
                 rows={3}
                 autocomplete="off"
               />
+            </Form.Group>
+
+            <Form.Group>
+              {videoLink.map((text, index) => (
+                <Flex key={index} pt={5} alignItems="center">
+                  <Form.Control
+                    id="idVideo"
+                    value={text}
+                    placeholder="Link Videos"
+                    type="text"
+                    onChange={(e) =>
+                      handleVideoLinkChange(index, e.target.value)
+                    }
+                    autoComplete="off"
+                  />
+
+                  <Box marginLeft="15px">
+                    <Button
+                      ml={2}
+                      colorScheme="red"
+                      onClick={() => handleRemoveVideoLink(index)}
+                    >
+                      Eliminar
+                    </Button>
+                  </Box>
+                </Flex>
+              ))}
+
+              <Button
+                className="text-center mt-4 mb-4"
+                variant="primary"
+                onClick={handleAddText}
+              >
+                Agregar Link Video
+              </Button>
             </Form.Group>
 
             <PlacesAutocomplete
@@ -345,6 +405,7 @@ export function FormAdd() {
                 />
               </div>
 
+              {/*
               <div className="drop-file-input">
                 <div className="drop-file-input__label">
                   <img src={uploadVideo} alt="" />
@@ -358,6 +419,7 @@ export function FormAdd() {
                   onChange={fileDropVideo}
                 />
               </div>
+                    */}
             </Stack>
 
             <Button

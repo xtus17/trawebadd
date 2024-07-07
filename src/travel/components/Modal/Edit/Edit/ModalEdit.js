@@ -82,28 +82,11 @@ export const ModalEdit = ({ isModalEditar, setIsModalEditar, editar }) => {
     <div>
       <Modal show={isModalEditar} onHide={() => setIsModalEditar(false)}>
         <Modal.Header>
-          <Modal.Title>Editar Emergencia</Modal.Title>
+          <Modal.Title>Editar</Modal.Title>
         </Modal.Header>
         <Modal.Body>
           <Stack>
             <Form onSubmit={handleSubmit}>
-              <Form.Group>
-                <Row />
-                <Form.Control
-                  id="fecha"
-                  required
-                  type="datetime-local"
-                  className="mb-2"
-                  value={getData.fecha}
-                  onChange={(e) =>
-                    setGetData({
-                      ...getData,
-                      fecha: e.target.value,
-                    })
-                  }
-                />
-              </Form.Group>
-
               <Form.Group>
                 <Row />
                 <Form.Select
@@ -145,57 +128,6 @@ export const ModalEdit = ({ isModalEditar, setIsModalEditar, editar }) => {
                     setGetData({
                       ...getData,
                       descripcion: e.target.value,
-                    })
-                  }
-                />
-              </Form.Group>
-
-              <Form.Group>
-                <Row />
-                <Form.Control
-                  id="nombres"
-                  placeholder="Nombres denunciante"
-                  type="text"
-                  className="mb-2"
-                  value={getData.nombres}
-                  onChange={(e) =>
-                    setGetData({
-                      ...getData,
-                      nombres: e.target.value,
-                    })
-                  }
-                />
-              </Form.Group>
-
-              <Form.Group>
-                <Row />
-                <Form.Control
-                  id="unidad"
-                  placeholder="Unidad que brinda apoyo"
-                  type="text"
-                  className="mb-2"
-                  value={getData.unidad}
-                  onChange={(e) =>
-                    setGetData({
-                      ...getData,
-                      unidad: e.target.value,
-                    })
-                  }
-                />
-              </Form.Group>
-
-              <Form.Group>
-                <Row />
-                <Form.Control
-                  id="response"
-                  placeholder="Respuesta"
-                  type="text"
-                  className="mb-2"
-                  value={getData.response}
-                  onChange={(e) =>
-                    setGetData({
-                      ...getData,
-                      response: e.target.value,
                     })
                   }
                 />
