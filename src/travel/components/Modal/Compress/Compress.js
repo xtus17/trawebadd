@@ -23,13 +23,11 @@ export function Compress() {
       .then((response) => response.json())
       .then((data) => {
         // Ajusta la calidad a 80 en la URL generada
-        const imageUrl = `${data.url.replace("/upload/", "/upload/q_80/")}`;
+        const imageUrl = `${data.url.replace("/upload/", "/upload/q_60/")}`;
         setUrl(imageUrl);
       })
       .catch((e) => console.log(e));
   };
-
-  console.log(url);
 
   return (
     <>

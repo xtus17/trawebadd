@@ -1,9 +1,7 @@
-import { db } from "../../../../firebase";
+import { db } from "./../../../../firebase";
 
-function editLocation({ infoData, id }) {
-  const collectionRef = db.collection("tangamandapio").doc(id).update(infoData);
-  const docRef = db.doc(collectionRef);
-  db(docRef, infoData);
+export async function editLocation({ infoData, id }) {
+  try {
+    await db.collection("tangamandapio").doc(id).update(infoData);
+  } catch (error) {}
 }
-
-export default editLocation;

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Modal, Stack, Button, Form, Dropdown } from "react-bootstrap";
-import editLocation from "./editLocation";
+import { editLocation } from "./editLocation";
 import PlacesAutocomplete, {
   geocodeByAddress,
   getLatLng,

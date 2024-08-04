@@ -274,4 +274,9 @@ const NAV_ITEMS = [
     label: "Comprimir Imágenes",
     href: "/travel/compress",
   },
+
+  {
+    label: "Calendario",
+    href: "/travel/calendar",
+  },
 ];

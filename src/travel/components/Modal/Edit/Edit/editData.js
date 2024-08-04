@@ -1,7 +1,7 @@
-import { db } from "../../../../firebase";
+import { db } from "./../../../../firebase";
 
-export function editData({ infoData, id }) {
-  const collectionRef = db.collection("tangamandapio").doc(id).update(infoData);
-  const docRef = db.doc(collectionRef);
-  db(docRef, infoData);
+export async function editData({ infoData, id }) {
+  try {
+    await db.collection("tangamandapio").doc(id).update(infoData);
+  } catch (error) {}
 }

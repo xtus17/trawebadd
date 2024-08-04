@@ -16,7 +16,6 @@ import { ThreeBody } from "@uiball/loaders";
 import { MdPlace } from "react-icons/md";
 import { Header } from "./../../Header";
 import upload from "./../../../../Assets/2/upload.png";
-import uploadVideo from "./../../../../Assets/2/uploadVideo.png";
 import { FaWindowClose } from "react-icons/fa";
 
 export function FormAdd() {
@@ -239,8 +238,6 @@ export function FormAdd() {
     setArrayVideo(updatedList);
   };
 
-  console.log(arrayImage);
-
   return (
     <>
       <Header />
@@ -259,14 +256,26 @@ export function FormAdd() {
               >
                 <option value="">Selecciona la categoría</option>
                 <option value="Sitios Naturales">Sitios Naturales</option>
+                <option value="Monumentos Históricos">
+                  Monumentos Históricos
+                </option>
+                <option value="Museos y Galerías de Arte">
+                  Museos y Galerías de Arte
+                </option>
+                <option value="Eventos y Festivales">
+                  Eventos y Festivales
+                </option>
+                <option value="Parques Temáticos y de Atracciones">
+                  Parques Temáticos y de Atracciones
+                </option>
+                <option value="Sitios Religiosos">Sitios Religiosos</option>
+                <option value="Playas">Playas</option>
                 <option value="Manifestaciones Culturales">
                   Manifestaciones Culturales
                 </option>
                 <option value="Folklore">Folklore</option>
                 <option value="Servicios">Servicios</option>
-                <option value="Medio de Transporte">
-                  Medio de Transporte
-                </option>
+                <option value="Medio de Transporte">Medio de Transporte</option>
               </Form.Select>
             </Form.Group>
 

@@ -147,11 +147,10 @@ export const Home = () => {
                 <Td>{datas.place}</Td>
                 <Td>{datas.descripcion}</Td>
                 <Td>{datas.direccion}</Td>
-
                 <Td>
                   <SimpleGrid
-                    columns={{ sm: 2, md: 4 }}
-                    spacingX={{ sm: 7, md: 5 }}
+                    columns={{ sm: 1, md: 1 }}
+                    spacingY={{ sm: 2, md: 3 }}
                   >
                     <Tooltip label="Editar" placement="left">
                       <Box position={"relative"} color={"white"}>

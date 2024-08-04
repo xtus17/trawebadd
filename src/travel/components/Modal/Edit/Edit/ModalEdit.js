@@ -6,61 +6,12 @@ export const ModalEdit = ({ isModalEditar, setIsModalEditar, editar }) => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    const dias = [
-      "Domingo",
-      "Lunes",
-      "Martes",
-      "Miércoles",
-      "Jueves",
-      "Viernes",
-      "Sábado",
-    ];
-
-    const meses = [
-      "Enero",
-      "Febrero",
-      "Marzo",
-      "Abril",
-      "Mayo",
-      "Junio",
-      "Julio",
-      "Agosto",
-      "Septiembre",
-      "Octubre",
-      "Noviembre",
-      "Diciembre",
-    ];
-
     const descripcion = document.getElementById("descripcion").value;
-    const delito = document.getElementById("delito").value;
-    const fecha = document.getElementById("fecha").value;
-    const response = document.getElementById("response").value;
-    const unidad = document.getElementById("unidad").value;
-    const nombres = document.getElementById("nombres").value;
-    const date = new Date(fecha);
-    const daynumber = date.getDate();
-    const day = dias[date.getDay()];
-    const monthname = meses[date.getMonth()];
-    const month = date.getMonth() + 1;
-    const year = date.getUTCFullYear();
-    const hour = date.toLocaleTimeString();
-    const hourexacly = date.toLocaleTimeString().slice(0, 2);
+    const category = document.getElementById("category").value;
 
     const infoData = {
       descripcion,
-      delito,
-      fecha,
-      unidad,
-      response,
-      nombres,
-      date,
-      daynumber,
-      monthname,
-      month,
-      year,
-      hour,
-      day,
-      hourexacly,
+      category,
     };
 
     setIsModalEditar(false);
@@ -90,20 +41,34 @@ export const ModalEdit = ({ isModalEditar, setIsModalEditar, editar }) => {
               <Form.Group>
                 <Row />
                 <Form.Select
-                  id="delito"
+                  id="category"
                   aria-label="select"
                   required="aria-required"
                   className="mb-2"
-                  value={getData.delito}
+                  value={getData.category}
                   onChange={(e) =>
                     setGetData({
                       ...getData,
-                      delito: e.target.value,
+                      category: e.target.value,
                     })
                   }
                 >
-                  <option value="">Selecciona una opción</option>
+                  <option value="">Selecciona la categoría</option>
                   <option value="Sitios Naturales">Sitios Naturales</option>
+                  <option value="Monumentos Históricos">
+                    Monumentos Históricos
+                  </option>
+                  <option value="Museos y Galerías de Arte">
+                    Museos y Galerías de Arte
+                  </option>
+                  <option value="Eventos y Festivales">
+                    Eventos y Festivales
+                  </option>
+                  <option value="Parques Temáticos y de Atracciones">
+                    Parques Temáticos y de Atracciones
+                  </option>
+                  <option value="Sitios Religiosos">Sitios Religiosos</option>
+                  <option value="Playas">Playas</option>
                   <option value="Manifestaciones Culturales">
                     Manifestaciones Culturales
                   </option>

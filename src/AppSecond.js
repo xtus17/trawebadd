@@ -9,6 +9,7 @@ import { Register } from "./travel/components/Account/Register";
 import { ProtectedRoute } from "./travel/components/ProtectedRoute";
 import { FormAdd } from "./travel/components/Modal/Add/FormAdd";
 import { Compress } from "./travel/components/Modal/Compress/Compress";
+import { Calendar } from "./travel/components/Calendar/Calendar";
 
 function App() {
   return (
@@ -29,6 +30,15 @@ function App() {
             element={
               <ProtectedRoute>
                 <FormAdd />
+              </ProtectedRoute>
+            }
+          />
+
+          <Route
+            path="/travel/calendar"
+            element={
+              <ProtectedRoute>
+                <Calendar />
               </ProtectedRoute>
             }
           />
