@@ -276,7 +276,11 @@ const NAV_ITEMS = [
   },
 
   {
-    label: "Calendario",
+    label: "Agregar Evento",
+    href: "/travel/addcalendar",
+  },
+  {
+    label: "Eventos",
     href: "/travel/calendar",
   },
 ];
