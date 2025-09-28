@@ -7,7 +7,11 @@ import {
   ListIcon,
   Divider,
 } from "@chakra-ui/react";
-import { CheckCircleIcon, WarningIcon, InfoIcon } from "@chakra-ui/icons";
+import {
+  FaCheckCircle,
+  FaExclamationTriangle,
+  FaInfoCircle,
+} from "react-icons/fa";
 import { Footer } from "./Footer";
 
 export function Term() {
@@ -38,16 +42,16 @@ export function Term() {
         <Text fontWeight="bold">1. Uso de la Aplicación</Text>
         <List spacing={2} mt={2}>
           <ListItem>
-            <ListIcon as={CheckCircleIcon} color="green.500" />
+            <ListIcon as={FaCheckCircle} color="green" />
             Travel City es una plataforma informativa sobre lugares turísticos.
           </ListItem>
           <ListItem>
-            <ListIcon as={CheckCircleIcon} color="green.500" />
+            <ListIcon as={FaCheckCircle} color="green" />
             Los usuarios pueden consultar información y publicar comentarios o
             reseñas.
           </ListItem>
           <ListItem>
-            <ListIcon as={WarningIcon} color="red.500" />
+            <ListIcon as={FaExclamationTriangle} color="red" />
             No se permite realizar reservas, compras ni transacciones
             comerciales dentro de la aplicación.
           </ListItem>
@@ -59,16 +63,16 @@ export function Term() {
         <Text fontWeight="bold">2. Registro y Cuenta</Text>
         <List spacing={2} mt={2}>
           <ListItem>
-            <ListIcon as={CheckCircleIcon} color="green.500" />
+            <ListIcon as={FaCheckCircle} color="green" />
             El usuario debe crear una cuenta con un correo electrónico válido.
           </ListItem>
           <ListItem>
-            <ListIcon as={CheckCircleIcon} color="green.500" />
+            <ListIcon as={FaCheckCircle} color="green" />
             El usuario es responsable de la seguridad y confidencialidad de sus
             credenciales.
           </ListItem>
           <ListItem>
-            <ListIcon as={WarningIcon} color="red.500" />
+            <ListIcon as={FaExclamationTriangle} color="red" />
             Está prohibido compartir la cuenta con terceros.
           </ListItem>
         </List>
@@ -79,20 +83,20 @@ export function Term() {
         <Text fontWeight="bold">3. Prohibiciones</Text>
         <List spacing={2} mt={2}>
           <ListItem>
-            <ListIcon as={WarningIcon} color="red.500" />
+            <ListIcon as={FaExclamationTriangle} color="red" />
             Publicar comentarios que inciten a la violencia, discriminación u
             odio.
           </ListItem>
           <ListItem>
-            <ListIcon as={WarningIcon} color="red.500" />
+            <ListIcon as={FaExclamationTriangle} color="red" />
             Difundir información falsa o difamatoria.
           </ListItem>
           <ListItem>
-            <ListIcon as={WarningIcon} color="red.500" />
+            <ListIcon as={FaExclamationTriangle} color="red" />
             Realizar spam o publicidad no autorizada.
           </ListItem>
           <ListItem>
-            <ListIcon as={WarningIcon} color="red.500" />
+            <ListIcon as={FaExclamationTriangle} color="red" />
             Alterar la seguridad o funcionamiento de la aplicación.
           </ListItem>
         </List>
@@ -142,15 +146,15 @@ export function Term() {
         <Text fontWeight="bold">1. Datos Recopilados</Text>
         <List spacing={2} mt={2}>
           <ListItem>
-            <ListIcon as={InfoIcon} color="blue.500" />
+            <ListIcon as={FaInfoCircle} color="blue" />
             Correo electrónico: usado solo para registro y autenticación.
           </ListItem>
           <ListItem>
-            <ListIcon as={InfoIcon} color="blue.500" />
+            <ListIcon as={FaInfoCircle} color="blue" />
             Comentarios y reseñas: asociados al perfil del usuario.
           </ListItem>
           <ListItem>
-            <ListIcon as={WarningIcon} color="red.500" />
+            <ListIcon as={FaExclamationTriangle} color="red" />
             No recopilamos ubicación en tiempo real ni datos sensibles.
           </ListItem>
         </List>
@@ -161,15 +165,15 @@ export function Term() {
         <Text fontWeight="bold">2. Uso de la Información</Text>
         <List spacing={2} mt={2}>
           <ListItem>
-            <ListIcon as={CheckCircleIcon} color="green.500" />
+            <ListIcon as={FaCheckCircle} color="green" />
             Gestionar el acceso y uso de la aplicación.
           </ListItem>
           <ListItem>
-            <ListIcon as={CheckCircleIcon} color="green.500" />
+            <ListIcon as={FaCheckCircle} color="green" />
             Permitir la publicación de reseñas y comentarios.
           </ListItem>
           <ListItem>
-            <ListIcon as={CheckCircleIcon} color="green.500" />
+            <ListIcon as={FaCheckCircle} color="green" />
             Mejorar la calidad del servicio.
           </ListItem>
         </List>
@@ -211,3 +215,4 @@ export function Term() {
     </>
   );
 }
+
