@@ -1,220 +1,209 @@
 import React from "react";
-import { Box, Text } from "@chakra-ui/react";
+import {
+  Box,
+  Text,
+  List,
+  ListItem,
+  ListIcon,
+  Divider,
+} from "@chakra-ui/react";
+import { CheckCircleIcon, WarningIcon, InfoIcon } from "@chakra-ui/icons";
 import { Footer } from "./Footer";
 
 export function Term() {
   return (
     <>
-      <Box>
-        <Box py={20} px={20} textAlign={"center"}>
-          <Text fontSize={20} fontWeight={600}>
-            TÉRMINOS Y CONDICIONES DE USO
-          </Text>
-        </Box>
-      </Box>
-
-      <Box py={5} px={20}>
-        <Text>1. DATOS DE IDENTIFICACIÓN</Text>
-        <Text>
-          Usted está visitando el Portal del Diario El Comercio (el “Sitio Web o
-          la Aplicación”), de titularidad de EMPRESA EDITORA EL COMERCIO S.A.,
-          con R.U.C. N°20143229816, con domicilio en Jr. Jorge Salazar Araoz N°
-          171, Santa Catalina, La Victoria, provincia y departamento de Lima (el
-          “Grupo El Comercio”).
+      <Box py={10} px={{ base: 6, md: 20 }} textAlign="center">
+        <Text fontSize="2xl" fontWeight="bold">
+          TÉRMINOS Y CONDICIONES DE USO
+        </Text>
+        <Text fontSize="sm" color="gray.500" mt={2}>
+          Última Actualización: 28 de septiembre del 2025
         </Text>
       </Box>
 
-      <Box py={5} px={20}>
-        <Text>2. ACCESO Y ACEPTACIÓN DEL USUARIO</Text>
+      {/* Introducción */}
+      <Box py={5} px={{ base: 6, md: 20 }}>
         <Text>
-          Estos Términos y Condiciones regulan el acceso y utilización por parte
-          del Usuario de los servicios y facilidades que ofrece el Sitio Web o
-          la Aplicación. La condición de “Usuario” es adquirida por la mera
-          navegación y/o utilización del Sitio Web o la Aplicación. El Usuario
-          puede acceder y navegar por el Sitio Web o la Aplicación libremente
-          sin necesidad de registrarse y/o suscribirse. Sin embargo, en algunos
-          casos se requerirá del registro y/o suscripción para acceder a los
-          servicios suministrados por el Grupo El Comercio o por terceros, a
-          través del Sitio Web o la Aplicación, los cuales pueden estar sujetos
-          a condiciones específicas. Asimismo, el acceso y navegación por el
-          Sitio Web y la Aplicación por parte del Usuario implica la aceptación
-          sin reservas de todas las disposiciones incluidas en los presentes
-          Términos y Condiciones.
+          Bienvenido a <b>Travel City</b>, una aplicación diseñada para ofrecer
+          información sobre lugares turísticos, así como permitir a los usuarios
+          compartir comentarios y reseñas. Al registrarse y usar esta
+          aplicación, usted confirma que es mayor de 18 años y que ha leído,
+          entendido y aceptado los presentes Términos y Condiciones de Uso.
         </Text>
       </Box>
 
-      <Box py={5} px={20}>
-        <Text>1. DATOS DE IDENTIFICACIÓN</Text>
-        <Text>
-          Usted está visitando el Portal del Diario El Comercio (el “Sitio Web o
-          la Aplicación”), de titularidad de EMPRESA EDITORA EL COMERCIO S.A.,
-          con R.U.C. N°20143229816, con domicilio en Jr. Jorge Salazar Araoz N°
-          171, Santa Catalina, La Victoria, provincia y departamento de Lima (el
-          “Grupo El Comercio”).
+      {/* 1. Uso de la aplicación */}
+      <Box py={5} px={{ base: 6, md: 20 }}>
+        <Text fontWeight="bold">1. Uso de la Aplicación</Text>
+        <List spacing={2} mt={2}>
+          <ListItem>
+            <ListIcon as={CheckCircleIcon} color="green.500" />
+            Travel City es una plataforma informativa sobre lugares turísticos.
+          </ListItem>
+          <ListItem>
+            <ListIcon as={CheckCircleIcon} color="green.500" />
+            Los usuarios pueden consultar información y publicar comentarios o
+            reseñas.
+          </ListItem>
+          <ListItem>
+            <ListIcon as={WarningIcon} color="red.500" />
+            No se permite realizar reservas, compras ni transacciones
+            comerciales dentro de la aplicación.
+          </ListItem>
+        </List>
+      </Box>
+
+      {/* 2. Registro y Cuenta */}
+      <Box py={5} px={{ base: 6, md: 20 }}>
+        <Text fontWeight="bold">2. Registro y Cuenta</Text>
+        <List spacing={2} mt={2}>
+          <ListItem>
+            <ListIcon as={CheckCircleIcon} color="green.500" />
+            El usuario debe crear una cuenta con un correo electrónico válido.
+          </ListItem>
+          <ListItem>
+            <ListIcon as={CheckCircleIcon} color="green.500" />
+            El usuario es responsable de la seguridad y confidencialidad de sus
+            credenciales.
+          </ListItem>
+          <ListItem>
+            <ListIcon as={WarningIcon} color="red.500" />
+            Está prohibido compartir la cuenta con terceros.
+          </ListItem>
+        </List>
+      </Box>
+
+      {/* 3. Prohibiciones */}
+      <Box py={5} px={{ base: 6, md: 20 }}>
+        <Text fontWeight="bold">3. Prohibiciones</Text>
+        <List spacing={2} mt={2}>
+          <ListItem>
+            <ListIcon as={WarningIcon} color="red.500" />
+            Publicar comentarios que inciten a la violencia, discriminación u
+            odio.
+          </ListItem>
+          <ListItem>
+            <ListIcon as={WarningIcon} color="red.500" />
+            Difundir información falsa o difamatoria.
+          </ListItem>
+          <ListItem>
+            <ListIcon as={WarningIcon} color="red.500" />
+            Realizar spam o publicidad no autorizada.
+          </ListItem>
+          <ListItem>
+            <ListIcon as={WarningIcon} color="red.500" />
+            Alterar la seguridad o funcionamiento de la aplicación.
+          </ListItem>
+        </List>
+      </Box>
+
+      {/* 4. Limitación */}
+      <Box py={5} px={{ base: 6, md: 20 }}>
+        <Text fontWeight="bold">4. Limitación de Responsabilidad</Text>
+        <Text mt={2}>
+          Travel City brinda información de carácter orientativo y no garantiza
+          la exactitud o disponibilidad total de los datos. El uso de la
+          aplicación es responsabilidad exclusiva del usuario.
         </Text>
       </Box>
 
-      <Box py={5} px={20}>
-        <Text>3. MODIFICACIÓN DE LOS TÉRMINOS Y CONDICIONES</Text>
-        <Text>
-          El Grupo El Comercio se reserva expresamente el derecho a modificar,
-          actualizar o ampliar en cualquier momento los presentes Términos y
-          Condiciones. Cualquier modificación, actualización o ampliación
-          producida en los presentes Términos y Condiciones será inmediatamente
-          publicada siendo responsabilidad del Usuario revisar los Términos y
-          Condiciones vigentes al momento de la navegación. En caso de que el
-          Usuario no estuviera de acuerdo con las modificaciones mencionadas,
-          podrá optar por no hacer uso de los servicios ofrecidos por el Grupo
-          El Comercio a través del Sitio Web o la Aplicación.
+      {/* 5. Derechos */}
+      <Box py={5} px={{ base: 6, md: 20 }}>
+        <Text fontWeight="bold">5. Derechos de Contenido</Text>
+        <Text mt={2}>
+          Los comentarios publicados son responsabilidad de quien los emite. Al
+          compartir contenido, el usuario concede a Travel City un derecho
+          limitado para mostrarlo dentro de la aplicación.
         </Text>
       </Box>
 
-      <Box py={5} px={20}>
-        <Text>4. SERVICIOS OFRECIDOS POR EL SITIO WEB O LA APLICACIÓN</Text>
-        <Text>
-          El Sitio Web o la Aplicación ofrecen una plataforma a la que los
-          Usuarios pueden acceder para conocer información y/o noticias de
-          actualidad, tanto nacionales como internacionales. El Usuario también
-          tiene la posibilidad de generar y crear contenido en el Sitio Web o la
-          Aplicación y compartir dichos contenidos a través de redes sociales u
-          otras plataformas, conforme a los estipulado en el numeral 8 de estos
-          Términos y Condiciones. Los Usuarios reconocen haber proporcionado
-          voluntariamente sus datos personales, de conformidad con nuestra
-          Política de Privacidad, a fin de poder disfrutar de los servicios
-          ofrecidos por el Sitio Web o la Aplicación.
+      <Divider my={10} />
+
+      {/* Política de Privacidad */}
+      <Box py={10} px={{ base: 6, md: 20 }} textAlign="center">
+        <Text fontSize="2xl" fontWeight="bold">
+          POLÍTICA DE PRIVACIDAD – Travel City
+        </Text>
+        <Text fontSize="sm" color="gray.500" mt={2}>
+          Última Actualización: 28 de septiembre del 2025
         </Text>
       </Box>
 
-      <Box py={5} px={20}>
-        <Text>5. USO DEL SITIO WEB O LA APLICACIÓN</Text>
+      <Box py={5} px={{ base: 6, md: 20 }}>
         <Text>
-          Los servicios que se ofrecen a través del presente Sitio Web o
-          Aplicación se encuentran disponibles sólo para aquellas personas que
-          puedan celebrar contratos legalmente vinculantes de acuerdo a lo
-          establecido por la ley aplicable. Al acceder al Sitio Web o la
-          Aplicación, el Usuario declara ser mayor de 18 años de edad y
-          encontrarse facultado a asumir obligaciones vinculantes con respecto a
-          cualquier tipo de responsabilidad que se produzca por el uso del Sitio
-          Web o la Aplicación. El Usuario se compromete a utilizar el Sitio Web
-          o la Aplicación de conformidad con la Ley, los presentes Términos y
-          Condiciones, la moral, las buenas costumbres y el orden público. En
-          este sentido, la utilización por parte del Usuario del Sitio Web o la
-          Aplicación se realizará de conformidad con las siguientes directivas:
-          El Usuario se obliga a no utilizar el Sitio Web o la Aplicación con
-          fines o efectos ilícitos o contrarios al contenido de los presentes
-          Términos y Condiciones, lesivos de los intereses o derechos de
-          terceros, o que de cualquier forma pueda dañar, inutilizar, deteriorar
-          la plataforma o impedir un normal disfrute del Sitio Web o la
-          Aplicación por otros Usuarios. El Usuario se compromete expresamente a
-          no destruir, alterar, inutilizar o, de cualquier otra forma, dañar los
-          datos, programas o documentos electrónicos y demás que se encuentren
-          en el Sitio Web o la Aplicación. El Usuario se compromete a no
-          obstaculizar el acceso a otros Usuarios mediante el consumo masivo de
-          los recursos informáticos a través de los cuales el Grupo El Comercio
-          presta el servicio, así como a no realizar acciones que dañen,
-          interrumpan o generen errores en dichos sistemas o servicios. El
-          Usuario se compromete a no intentar penetrar o probar la
-          vulnerabilidad de un sistema o de una red propia del Sitio Web o la
-          Aplicación, así como quebrantar las medidas de seguridad o de
-          autenticación del mismo. El Usuario se compromete a hacer un uso
-          adecuado de los contenidos que se ofrecen en el Sitio Web o la
-          Aplicación y a no emplearlos para incurrir en actividades ilícitas,
-          así como a no publicar ningún tipo de contenido ilícito. El Usuario se
-          compromete a no utilizar el Sitio Web o la Aplicación para, a modo de
-          referencia, más no limitativo, enviar correos electrónicos masivos
-          (spam) o correos electrónicos con contenido amenazante, abusivo,
-          hostil, ultrajante, difamatorio, vulgar, obsceno o injurioso.
-          Asimismo, se compromete a no utilizar un lenguaje ilícito, abusivo,
-          amenazante, obsceno, vulgar, racista, ni cualquier lenguaje que se
-          considere inapropiado, ni anunciar o proporcionar enlaces a sitios que
-          contengan materia ilegal u otro contenido que pueda dañar o deteriorar
-          la red personal o computadora de otro Usuario. El Grupo El Comercio se
-          reserva la potestad de determinar a su libre criterio, cuándo se
-          produce la vulneración de cualquiera de los preceptos enunciados en el
-          presente apartado por parte de los contenidos publicados por algún
-          Usuario, así como la potestad de eliminar dichos contenidos del Sitio
-          Web o la Aplicación. En el caso en que un Usuario infrinja lo
-          establecido en el presente apartado, el Grupo El Comercio procederá a
-          realizar alguna de las siguientes acciones, dependiendo de la gravedad
-          o recurrencia de la infracción: 1° Amonestación al Usuario.2°
-          Suspensión temporal de la cuenta del Usuario.3° Cancelación definitiva
-          de la cuenta del Usuario.4° Acciones por responsabilidades civiles o
-          penales.
+          En <b>Travel City</b> valoramos su privacidad. Esta política describe
+          cómo recopilamos, usamos y protegemos su información personal.
         </Text>
       </Box>
 
-      <Box py={5} px={20}>
-        <Text>1. DATOS DE IDENTIFICACIÓN</Text>
-        <Text>
-          Las comunicaciones concernientes a la administración de la contraseña
-          pueden ser enviadas a contacto@peruid.pe 7. PROPIEDAD INTELECTUAL
-          Todos los derechos de propiedad intelectual del Sitio Web o la
-          Aplicación y de sus contenidos y diseños pertenecen al Grupo El
-          Comercio o, en su caso, a terceras personas. En aquellos casos en que
-          sean propiedad de terceros, el Grupo El Comercio cuenta con las
-          licencias necesarias para su utilización. Quedan expresamente
-          prohibidas la reproducción, distribución, transformación, comunicación
-          pública, puesta a disposición o cualquier modo de utilización, de la
-          totalidad o parte de los contenidos del Sitio Web o la Aplicación, en
-          cualquier soporte y por cualquier medio técnico, sin la autorización
-          del Grupo El Comercio. El Usuario se compromete a respetar los
-          derechos de propiedad intelectual de titularidad del Grupo El Comercio
-          y de terceros. Asimismo, queda expresamente prohibida la utilización o
-          reproducción de cualquier marca registrada, nombre o logotipo que
-          figure en el Sitio Web o la Aplicación sin la autorización previa y
-          por escrito del Grupo El Comercio, así como la utilización del
-          software que opera el Sitio Web o la Aplicación con excepción de
-          aquellos usos permitidos bajo estos Términos y Condiciones.
-          Finalmente, quedan igualmente prohibidas a título enunciativo las
-          siguientes prácticas: La presentación de una página del Sitio Web o la
-          Aplicación en una ventana que no pertenezca al Grupo El Comercio,
-          mediante la técnica denominada "framing" a no ser que se cuente con la
-          autorización previa y por escrito del Grupo El Comercio. La inserción
-          de una imagen difundida en el Sitio Web o la Aplicación en una página
-          no perteneciente al Grupo El Comercio, mediante la técnica denominada
-          "inline linking", si ello no cuenta con la autorización previa y por
-          escrito del Grupo El Comercio.
+      {/* 1. Datos recopilados */}
+      <Box py={5} px={{ base: 6, md: 20 }}>
+        <Text fontWeight="bold">1. Datos Recopilados</Text>
+        <List spacing={2} mt={2}>
+          <ListItem>
+            <ListIcon as={InfoIcon} color="blue.500" />
+            Correo electrónico: usado solo para registro y autenticación.
+          </ListItem>
+          <ListItem>
+            <ListIcon as={InfoIcon} color="blue.500" />
+            Comentarios y reseñas: asociados al perfil del usuario.
+          </ListItem>
+          <ListItem>
+            <ListIcon as={WarningIcon} color="red.500" />
+            No recopilamos ubicación en tiempo real ni datos sensibles.
+          </ListItem>
+        </List>
+      </Box>
+
+      {/* 2. Uso de la información */}
+      <Box py={5} px={{ base: 6, md: 20 }}>
+        <Text fontWeight="bold">2. Uso de la Información</Text>
+        <List spacing={2} mt={2}>
+          <ListItem>
+            <ListIcon as={CheckCircleIcon} color="green.500" />
+            Gestionar el acceso y uso de la aplicación.
+          </ListItem>
+          <ListItem>
+            <ListIcon as={CheckCircleIcon} color="green.500" />
+            Permitir la publicación de reseñas y comentarios.
+          </ListItem>
+          <ListItem>
+            <ListIcon as={CheckCircleIcon} color="green.500" />
+            Mejorar la calidad del servicio.
+          </ListItem>
+        </List>
+      </Box>
+
+      {/* 3. Privacidad niños */}
+      <Box py={5} px={{ base: 6, md: 20 }}>
+        <Text fontWeight="bold">3. Privacidad de los Niños</Text>
+        <Text mt={2}>
+          Nuestro servicio no está dirigido a menores de 18 años. No recopilamos
+          información de manera intencional de personas que no cumplan este
+          requisito.
         </Text>
       </Box>
 
-      <Box py={5} px={20}>
-        <Text>9. ENLACES DE TERCEROS</Text>
-        <Text>
-          En el supuesto de que en el Sitio Web o la Aplicación se dispusieran
-          enlaces o hipervínculos hacia otros sitios de Internet, el Grupo El
-          Comercio declara que no ejerce ningún tipo de control sobre dichos
-          sitios y contenidos. En ningún caso el Grupo El Comercio asumirá
-          responsabilidad alguna por los contenidos de algún enlace
-          perteneciente a una web ajena, ni garantizará la disponibilidad
-          técnica, calidad, fiabilidad, exactitud, veracidad, validez y
-          constitucionalidad de cualquier material o información contenida en
-          los hipervínculos u otros lugares de Internet. Estos enlaces se
-          proporcionan únicamente para informar al Usuario sobre la existencia
-          de otras fuentes de información sobre un tema concreto, y la inclusión
-          de un enlace no implica la aprobación de la página web enlazada por
-          parte del Grupo El Comercio.
+      {/* 4. Seguridad */}
+      <Box py={5} px={{ base: 6, md: 20 }}>
+        <Text fontWeight="bold">4. Seguridad de la Información</Text>
+        <Text mt={2}>
+          Implementamos medidas razonables de protección, aunque ningún sistema
+          es 100% seguro. No garantizamos la seguridad absoluta de los datos
+          transmitidos en internet.
         </Text>
       </Box>
 
-      <Box py={5} px={20}>
-        <Text>12. COMUNICACIONES</Text>
-        <Text>
-          El Usuario acepta expresamente que la dirección de correo electrónico
-          consignada en el formulario de registro y/o suscripción será el medio
-          de contacto oficial entre el Sitio Web o la Aplicación y el Usuario,
-          siendo absoluta responsabilidad de este último verificar que dicho
-          correo electrónico esté siempre activo y funcional para poder recibir
-          todas las comunicaciones procedentes del Sitio Web o la Aplicación.
-          Los mensajes o comunicaciones del Sitio Web o la Aplicación a los
-          Usuarios sólo pueden provenir de las páginas o cuentas oficiales de
-          éste en redes sociales u otros medios. En caso se detectará que algún
-          Usuario está enviando comunicaciones o realizando publicaciones en
-          nombre del Sitio Web o la Aplicación, Grupo El Comercio iniciará las
-          acciones correctivas y legales pertinentes a fin de proteger al resto
-          de Usuarios de posibles riesgos de confusión. De otro lado, toda
-          comunicación que el Usuario desee dirigir al Sitio Web o la Aplicación
-          deberá realizarla a través de la siguiente dirección de correo
-          electrónico: csalas@comercio.com.pe
+      {/* 5. Contacto */}
+      <Box py={5} px={{ base: 6, md: 20 }}>
+        <Text fontWeight="bold">5. Contacto</Text>
+        <Text mt={2}>
+          Para consultas sobre estos términos o la política de privacidad puede
+          escribirnos a:{" "}
+          <b>
+            <i>📧 xaler.net.pe</i>
+          </b>
         </Text>
       </Box>
 
